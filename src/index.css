@@ -1,13 +1,80 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*, ::before, ::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+h3 {
+  color: #293356;
+  font-weight: bold;
+}
+.input-range__slider {
+  box-shadow: 1px 5px 12px #2bc6b6b0;
+  background: #26C5AF !important;
+  border-color: #2BC6B6 !important;
+  height: 2rem !important;
+  width: 2rem !important;
+  margin-top: -1.15rem !important;
+}
+.input-range__track {
+  height: 0.45rem !important;
+}
+.input-range__slider::after {
+  content: '>';
+  right: 2px;
+}
+.input-range__slider::before{
+  content: '<';
+  left: 2px;
+}
+.input-range__slider::after, .input-range__slider::before {
+  position: absolute;
+  color: #71FFF9;
+  font-size: 20px;
+  /* font-weight: bold; */
+}
+.input-range__track--active {
+  background: #26C5AF !important;
+}
+.input-range__label--min, .input-range__label--max, .input-range__label--value{
+  display: none !important;
+  visibility: hidden !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container-full {
+  background: rgb(241,245,254);
+  background: linear-gradient(0deg, rgba(241,245,254,1) 60%, rgba(249,250,255,1) 100%); 
+}
+.btn-dark {
+  color: #A7B5DC;
+  background: #293356
+}
+.bg-color-orange {
+  background: #FCE9E3;
+  color:#E1A897;
+}
+.toggle-switch-inner::before {
+  background-color: #26C5AF !important;
+}
+.toggle-switch.small-switch .toggle-switch-switch {
+  margin-bottom: 6px !important;
+}
+ul {
+  list-style: none;
+}
+
+ul li:before {
+  content: '✓';
+  color: #26C5AF;
+  padding-right: 8px;
+  font-weight: bold;
 }
